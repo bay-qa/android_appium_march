@@ -1,4 +1,4 @@
-Given(/^I land on Todays' featured article screen$/) do
+Given(/^I land on Today's featured article screen$/) do
   puts "I am on article screen"
 end
 
@@ -28,3 +28,10 @@ Then(/^I press Log in button$/) do
   puts "button is pressed"
 end
 
+Then(/^I should see "([^"]*)" in log in section$/) do |name|
+  puts name
+end
+
+Then(/^I press Log out button$/) do
+  puts "pressing Log out button"
+end
