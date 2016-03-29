@@ -2,7 +2,6 @@ Given(/^I land on Today's featured article screen$/) do
   puts "I am on article screen"
 end
 
-
 Then(/^I press navigation menu icon$/) do
   puts "pressing button"
 end
@@ -23,7 +22,6 @@ Then(/^I type my password "(.*?)"$/) do |password|
   puts password
 end
 
-
 Then(/^I press Log in button$/) do
   puts "button is pressed"
 end
@@ -35,3 +33,8 @@ end
 Then(/^I press Log out button$/) do
   puts "pressing Log out button"
 end
+
+Then(/^Log in button should be disabled$/) do
+  puts "I verify that Login button is disabled"
+end
+

@@ -1,0 +1,11 @@
+#creating profile that will execute all test scenarios with tag @login
+#profile will generate html report
+login_tests: --format html --out report.html --format pretty --tags @login
+
+#profile will execute all test scenarios with tag @search
+search_tests: --tags @search
+
+#profile will execute all test scenarios with tag @search or @login and do NOT execucte scenarios with tag @production
+regression_tests: --tags @login,@search --tags ~@production
+
+production_tests: --tags @production
