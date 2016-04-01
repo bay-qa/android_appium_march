@@ -1,13 +1,16 @@
 Given(/^I land on Today's featured article screen$/) do
-  puts "I am on article screen"
+  #content_desc = name
+  #resource-id = id
+  $driver.find_element(name: "Today's featured article")
 end
 
 Then(/^I press navigation menu icon$/) do
-  puts "pressing button"
+  $driver.find_element(name: "Wikipedia Alpha").click
 end
 
 Then(/^I press on Log in to Wikipedia$/) do
-  puts "pressing Log in button"
+  $driver.find_element(id: "nav_account_text").click
+  sleep 5
 end
 
 And(/^I land on Login screen$/) do
@@ -37,4 +40,6 @@ end
 Then(/^Log in button should be disabled$/) do
   puts "I verify that Login button is disabled"
 end
+
+
 
