@@ -11,7 +11,8 @@ Feature: Wikipedia Login
     And I land on Login screen
     Then I type my username "Aleksskela"
     And I type my password "root1234"
-    Then I press Log in button
+    Then I press Log in button on Login screen
+    And I land on Today's featured article screen
     And I press navigation menu icon
     Then I should see "Aleksskela" in log in section
     Then I press on Log in to Wikipedia
@@ -23,7 +24,7 @@ Feature: Wikipedia Login
     And I land on Login screen
     Then I type my username "Aleksskela"
     And I type my password "root1234"
-    Then I press Log in button
+    Then I press Log in button on Login screen
     And I press navigation menu icon
     Then I should see "Aleksskela" in log in section
 
@@ -35,7 +36,7 @@ Feature: Wikipedia Login
     And I land on Login screen
     Then I type my username "<user_name>"
     And I type my password "<password>"
-    Then I press Log in button
+    Then I press Log in button on Login screen
     And I press navigation menu icon
     Then I should see "<account_name>" in log in section
     Then I press on Log in to Wikipedia
