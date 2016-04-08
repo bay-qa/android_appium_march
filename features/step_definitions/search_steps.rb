@@ -1,9 +1,9 @@
 When(/^I press on Search textfield$/) do
-  puts "click on search textfield"
+  $driver.find_element(id: "main_search_bar_text").click
 end
 
-Then(/^I type "([^"]*)" into search field$/) do |seatch_term|
-  puts seatch_term
+Then(/^I type "([^"]*)" into search field$/) do |search_term|
+  $driver.find_element(id: "search_src_text").send_keys(search_term)
 end
 
 Then(/^I see that 1st search result include "([^"]*)"$/) do |name|
@@ -16,4 +16,8 @@ end
 
 And(/^I verify that article contains "([^"]*)"$/) do |name|
   puts "name"
+end
+
+And(/^I should see at least (\d+) search results$/) do |number|
+  $driver.find_elements(id: "page_list_item_container").size
 end

@@ -28,9 +28,12 @@ Feature: Wikipedia Login
     And I press navigation menu icon
     Then I should see "Aleksskela" in log in section
 
+  @login_button
   Scenario: Log in button should be disabled before user type credentials
     Then I type my username "Aleksskela"
     Then Log in button should be disabled
+    And I type my password "root1234"
+    Then Log in button should be enabled
 
   Scenario Outline: User able to login with valid credentials
     And I land on Login screen

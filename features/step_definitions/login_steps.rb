@@ -46,11 +46,17 @@ Then(/^I press Log out button$/) do
   $driver.find_element(id: "navdrawer").find_element(class: "android.widget.ListView").find_elements(class: "android.widget.TextView")[1].click
 end
 
-Then(/^Log in button should be disabled$/) do
-  puts "I verify that Login button is disabled"
+Then(/^Log in button should be (disabled|enabled)$/) do |state|
+  actual_button_state = $driver.find_element(id: "login_button").enabled?
+  if state == "enabled"
+    fail("Expecting Log in to be enabled") if actual_button_state == false
+  else
+    fail("Expecting Log in to be disabled") if actual_button_state == true
+  end
 end
 
-#alekseipetrovski
+
+
 
 
 
