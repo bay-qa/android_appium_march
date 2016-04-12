@@ -1,5 +1,6 @@
 Feature: Wikipedia search
 
+  @search
   Scenario: As Wikipedia user, I would like to perform search
     Given I land on Today's featured article screen
     When I press on Search textfield
@@ -21,7 +22,6 @@ Feature: Wikipedia search
     | Metallica   |
     | Bay Area    |
 
-  @search
   Scenario: As Wikipedia User I can search topics
     Given I land on Today's featured article screen
     When I press on Search textfield
