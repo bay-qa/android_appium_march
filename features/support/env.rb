@@ -1,5 +1,6 @@
 require "cucumber"
 require "appium_lib"
+require 'pry'
 
 APP_PATH = File.join(File.dirname(__FILE__), "..","..", "app-alpha-debug.apk")
 
@@ -15,4 +16,14 @@ def caps
                   debug:false}}
 end
 
+class Wikipedia
+end
+
 Appium::Driver.new(caps)
+Appium.promote_appium_methods Wikipedia
+
+
+
+World do
+  Wikipedia.new
+end
