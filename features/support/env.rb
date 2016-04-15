@@ -16,14 +16,6 @@ def caps
                   debug:false}}
 end
 
-class Wikipedia
-end
 
 Appium::Driver.new(caps)
-Appium.promote_appium_methods Wikipedia
 
-
-
-World do
-  Wikipedia.new
-end

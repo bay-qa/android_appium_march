@@ -1,6 +1,6 @@
+@gestures
 Feature: learning gestures
 
-  @gestures
   Scenario: As Wikipedia user, I can scroll down until Overview section
     Given I land on Today's featured article screen
     When I press on Search textfield
