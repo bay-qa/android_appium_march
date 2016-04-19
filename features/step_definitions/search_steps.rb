@@ -38,3 +38,25 @@ Then(/^I should see "([^"]*)" in Search textfield$/) do |search_term|
   actual_result = $driver.find_element(id: "search_src_text").text
   fail("Expecting to see #{search_term}") unless actual_result == search_term
 end
+
+Then(/^I press on More options button on article screen$/) do
+  $driver.find_element(name: "More options").click
+end
+
+
+Then(/^I press on Save page button on article screen$/) do
+  $driver.find_element(xpath: "//android.widget.TextView[@text='Save page']").click
+end
+
+
+And(/^I press Saved pages on navigation menu$/) do
+  $driver.find_element(xpath: "//android.widget.TextView[@text='Saved pages']").click
+end
+
+Then(/^I should see at least (\d+) saved pages$/) do |arg|
+  #TODO make this work
+end
+
+Then(/^I remove saved page with title "([^"]*)"$/) do |page_name|
+  Appium::TouchAction.new.long_press(name: page_name).perform().release
+end

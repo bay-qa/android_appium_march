@@ -1,4 +1,4 @@
-@login
+
 Feature: Wikipedia Login
 
   Background:
@@ -6,7 +6,7 @@ Feature: Wikipedia Login
     Given I press navigation menu icon
     Given I press on Log in to Wikipedia
 
-  @production @sanity @aaa
+  @production @sanity @login
   Scenario: User able to login with valid credentials
     And I land on Login screen
     Then I type my username "Aleksskela"

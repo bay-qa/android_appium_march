@@ -27,11 +27,30 @@ Feature: Wikipedia search
     Then I type "California" into search field
     And I should see at least 3 search results
 
-  @search
+
   Scenario: Auto suggestion
     Given I land on Today's featured article screen
     When I press on Search textfield
     Then I type "californa" into search field
     And I tap on search_suggestion
-    Then I should see "california" in Search textfield
+    Then I should see "California" in Search textfield
     Then I see that 1st search result include "California"
+
+  @search
+  Scenario: User able to save article and remove from Saved pages
+    Given I land on Today's featured article screen
+    When I press on Search textfield
+    Then I type "Chicago" into search field
+    When I press on 1st search result on search result screen
+    Then I press on More options button on article screen
+    Then I press on Save page button on article screen
+    Then I press on Search textfield
+    Then I type "San Francisco" into search field
+    When I press on 1st search result on search result screen
+    Then I press on More options button on article screen
+    Then I press on Save page button on article screen
+    And I press navigation menu icon
+    And I press Saved pages on navigation menu
+    Then I should see at least 2 saved pages
+    Then I remove saved page with title "San Francisco"
+
