@@ -20,6 +20,7 @@ Feature: Wikipedia search
     | search_term |
     | Metallica   |
     | Bay Area    |
+    | Los Angeles |
 
   Scenario: As Wikipedia User I can search topics
     Given I land on Today's featured article screen
